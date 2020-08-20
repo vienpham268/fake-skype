@@ -1,4 +1,3 @@
-import React from "react";
 import React, { Component } from "react";
 import {
   Route,
@@ -46,12 +45,12 @@ function PublicRoute({ component: Component, authenticated, ...rest }) {
   );
 }
 
-class App extends Component {
+export default class App extends Component {
   state = {
     authenticated: false,
     loading: true,
   };
-  componentDidMount() {
+  componentDidMount = () => {
     auth().onAuthStateChanged((user) => {
       if (user) {
         this.setState({
@@ -65,34 +64,33 @@ class App extends Component {
         });
       }
     });
-  }
+  };
   render() {
-    return;
-    this.state.loading === true ? (
+    return this.state.loading === true ? (
       <h2>Loading...</h2>
     ) : (
-      <Router>
-        <Switch>
-          <Route exact path="/" component={Home}></Route>
-          <PrivateRoute
-            path="/chat"
-            authenticated={this.state.authenticated}
-            component={Chat}
-          ></PrivateRoute>
-          <PublicRoute
-            path="/signup"
-            authenticated={this.state.authenticated}
-            component={Signup}
-          ></PublicRoute>
-          <PublicRoute
-            path="/login"
-            authenticated={this.state.authenticated}
-            component={Login}
-          ></PublicRoute>
-        </Switch>
-      </Router>
+      <React.Fragment>
+        <Router>
+          <Switch>
+            <Route exact path="/" component={Home}></Route>
+            <PrivateRoute
+              path="/chat"
+              authenticated={this.state.authenticated}
+              component={Chat}
+            ></PrivateRoute>
+            <PublicRoute
+              path="/signup"
+              authenticated={this.state.authenticated}
+              component={Signup}
+            ></PublicRoute>
+            <PublicRoute
+              path="/login"
+              authenticated={this.state.authenticated}
+              component={Login}
+            ></PublicRoute>
+          </Switch>
+        </Router>
+      </React.Fragment>
     );
   }
 }
-
-export default App;
