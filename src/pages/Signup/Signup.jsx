@@ -11,15 +11,16 @@ export default class SignUp extends Component {
   };
   render() {
     return (
-      <div>
+      <div className="sign-up">
         <form onSubmit={this.handleSubmit}>
           <h1>
             Sign Up to
-            <Link to="/">Fake-Skype</Link>
+            <Link to="/"> Fake-Skype</Link>
           </h1>
           <p>Fill in the form below to create an account</p>
-          <div>
+          <div className="form-group">
             <input
+              className="form-control"
               placeholder="Email"
               name="email"
               type="email"
@@ -27,8 +28,9 @@ export default class SignUp extends Component {
               value={this.state.email}
             />
           </div>
-          <div>
+          <div className="form-group">
             <input
+              className="form-control"
               placeholder="Password"
               name="password"
               type="password"
@@ -36,10 +38,11 @@ export default class SignUp extends Component {
               value={this.state.password}
             />
           </div>
-          <div>
-            {this.state.error ? <p>{this.state.error}</p> : null}
-            <button type="submit">Sign up</button>
-          </div>
+
+          {this.state.error ? <p>{this.state.error}</p> : null}
+          <button className="btn btn-primary" type="submit">
+            Sign up
+          </button>
         </form>
       </div>
     );
