@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { Component } from "react";
 import { auth } from "../../services/firebase";
 import { db } from "../../services/firebase";
@@ -75,18 +74,5 @@ class Chat extends Component {
     );
   }
 }
-
 export default Chat;
-=======
-import React, { Component } from 'react';
 
-
-class Chat extends Component {
-    state = {  }
-    render() { 
-        return ( <h1>Chat</h1> );
-    }
-}
- 
-export default Chat;
->>>>>>> e27dcb219e6bb1be24dfc4ac6757f1576465d32f

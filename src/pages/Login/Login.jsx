@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { Component } from "react";
 import { signin } from "../../helpers/auth";
 import { Link } from "react-router-dom";
@@ -69,18 +68,4 @@ class Login extends Component {
     );
   }
 }
-
 export default Login;
-=======
-import React, { Component } from 'react';
-
-
-class Login extends Component {
-    state = {  }
-    render() { 
-        return (<h1>Login</h1>  );
-    }
-}
- 
-export default Login;
->>>>>>> e27dcb219e6bb1be24dfc4ac6757f1576465d32f
