@@ -1,0 +1,19 @@
+.container-signup {
+  margin: 200px;
+  width: 30%;
+  text-align: left;
+}
+
+.form {
+  width: 100%;
+}
+
+.btn {
+  margin: 10px 5px; 
+  border-radius: 5px;
+}
+
+.btn.btn-primary{
+    width: 150px;
+}
+
