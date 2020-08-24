@@ -103,13 +103,13 @@ export default class SignUp extends Component {
                       </button>
                       <p>You can also sign up with any of these services</p>
                       <button
-                        className="btn btn-danger"
+                        className="btn btn-danger btn-block waves-effect waves-light"
                         onClick={this.handleGoogleSignIn}
                       >
                         Sign up with Google
                       </button>
                       <button
-                        className="btn btn-info"
+                        className="btn btn-info btn-block waves-effect waves-light"
                         onClick={this.handleFbSignIn}
                       >
                         Sign up with Facebook
