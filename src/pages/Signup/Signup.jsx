@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import {
   signup,
-  signInWithGoogle,
-  signInWithFacebook,
+  signInWithGoogleAccount,
+  signInWithFacebookAccount,
 } from "../../helpers/auth";
 export default class SignUp extends Component {
   handleSubmit = async (event) => {
@@ -22,7 +22,7 @@ export default class SignUp extends Component {
   };
   handleGoogleSignIn = async () => {
     try {
-      await signInWithGoogle();
+      await signInWithGoogleAccount();
     } catch (error) {
       this.setState({
         error: error.message,
@@ -32,7 +32,7 @@ export default class SignUp extends Component {
 
   handleFbSignIn = async () => {
     try {
-      await signInWithFacebook();
+      await signInWithFacebookAccount();
     } catch (error) {
       this.setState({
         error: error.message,
