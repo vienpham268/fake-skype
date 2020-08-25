@@ -3,34 +3,30 @@ import "./SideMenu.css";
 
 const SideMenu = () => {
   return (
-    <div className="side-menu flex-lg-column mr-lg-1">
-      <div className="navbar-brand-box"></div>
-      <div className="flex-lg-column my-auto">
+    <div className="side-menus flex-direct-col">
+      <div className="brand-box">
+        <a href="" className="logo">
+          <span className="logo">
+            <img src="" alt="" />
+          </span>
+        </a>
+      </div>
+      <div className="flex-direct-col margin-auto">
         <ul className="nav nav-pills side-menu-nav justify-content-center">
           <li className="nav-item">
-            <a href="">
-              <i className="fa fa-user fa-2x"></i>
-            </a>
+            <a href="">AAAA</a>
           </li>
           <li className="nav-item">
-            <a href="">
-              <i className="fa fa-user fa-2x"></i>
-            </a>
+            <a href="">A</a>
           </li>
           <li className="nav-item">
-            <a href="">
-              <i className="fa fa-user fa-2x"></i>
-            </a>
+            <a href="">A</a>
           </li>
           <li className="nav-item">
-            <a href="">
-              <i className="fa fa-user fa-2x"></i>
-            </a>
+            <a href="">A</a>
           </li>
           <li className="nav-item">
-            <a href="">
-              <i className="fa fa-user fa-2x"></i>
-            </a>
+            <a href="">A</a>
           </li>
         </ul>
       </div>
