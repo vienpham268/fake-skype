@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { auth } from "../../services/firebase";
 import { db } from "../../services/firebase";
-import "./Chat.css";
+import '../Chat/Chat.css'
+
 class Chat extends Component {
   state = {
     user: auth().currentUser,
@@ -50,29 +51,59 @@ class Chat extends Component {
 
   render() {
     return (
-      <div className="chat container">
-        {this.state.chats.map((chat) => {
-          return (
-            <div className="chat">
-              <p key={chat.timestamp}>{chat.content}</p>
-            </div>
-          );
-        })}
+      <div className="w-100">
+        {/* Conversation header */}
+        <div className="p-3 p-lg-4 border-bottom"></div>
 
-        <form onSubmit={this.handleSubmit}>
-          <input
-            className="form-control"
-            onChange={this.handleChange}
-            value={this.state.content}
-          />
-          <button className="btn btn-primary" type="submit">
-            Send
-          </button>
-        </form>
-        <div>Login in as: {this.state.user.email}</div>
+        {/* Conversation body */}
+        <div className="chat-conversation p-3 p-lg-4">
+          <div className="simplebar-wrapper" style={{ margin: "-24px" }}>
+            <div
+              className="simplebar-mask"
+              style={{ right: "-17px", bottom: "0px" }}
+            >
+              <div
+                className="simplebar-content-wrapper"
+                style={{ height: "100%", overflow: "hidden" }}
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        {/* Conversation bottom */}
+        <div className="p-3 p-lg-4 mb-0 border-top">
+          <div className="row no-gutters">
+            <div className="col">
+              <div>
+                <input
+                  placeholder="Enter Message..."
+                  className="form-control form-control-lg bg-light border-light"
+                  onChange={this.handleChange}
+                  value={this.state.content}
+                />
+              </div>
+            </div>
+            <div className="col-auto">
+              <div className="chat-input-links ml-md-2">
+                <ul className="list-inline mb-0">
+                  <li className="list-inline-item"></li>
+                  <li className="list-inline-item"></li>
+                  <li className="list-inline-item">
+                    <button
+                      onClick={this.handleSubmit}
+                      className="btn btn-primary"
+                      type="submit"
+                    >
+                      <i class="fa fa-paper-plane"></i>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
 }
 export default Chat;
-

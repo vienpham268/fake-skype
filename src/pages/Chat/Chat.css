@@ -1,3 +1,3 @@
-.chat {
-  background-color: cadetblue;
+.chat-conversation {
+  height: calc(100vh);
 }

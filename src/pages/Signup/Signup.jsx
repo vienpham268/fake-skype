@@ -61,59 +61,84 @@ export default class SignUp extends Component {
                     <form onSubmit={this.handleSubmit}>
                       <div className="form-group">
                         <label htmlFor="email">Email</label>
-                        <input
-                          className="form-control"
-                          placeholder="Email"
-                          name="email"
-                          type="email"
-                          onChange={this.handleChange}
-                          value={this.state.email}
-                        />
+                        <div className="input-group mb-3 bg-soft-light input-group-lg rounded-lg">
+                          <div className="input-group-prepend">
+                            <span className="input-group-text border-light text-muted">
+                              <i class="fa fa-envelope fa-xs" />
+                            </span>
+                          </div>
+                          <input
+                            className="form-control bg-soft-light border-light"
+                            placeholder="Enter Email"
+                            name="email"
+                            type="email"
+                            onChange={this.handleChange}
+                            value={this.state.email}
+                          />
+                        </div>
                       </div>
+
                       <div className="form-group">
                         <label htmlFor="username">Username</label>
-                        <input
-                          className="form-control"
-                          placeholder="Username"
-                          name="username"
-                          type="text"
-                          onChange={this.handleChange}
-                          value={this.state.username}
-                        />
+                        <div className="input-group mb-3 bg-soft-light input-group-lg rounded-lg">
+                          <div className="input-group-prepend">
+                            <span className="input-group-text border-light text-muted">
+                              <i class="fa fa-user fa-lg"></i>
+                            </span>
+                          </div>
+                          <input
+                            className="form-control bg-soft-light border-light"
+                            placeholder="Enter Username"
+                            name="username"
+                            type="text"
+                            onChange={this.handleChange}
+                            value={this.state.username}
+                          />
+                        </div>
                       </div>
+
                       <div className="form-group mb-4">
                         <label htmlFor="password">Password</label>
-                        <input
-                          className="form-control"
-                          placeholder="Password"
-                          name="password"
-                          type="password"
-                          onChange={this.handleChange}
-                          value={this.state.password}
-                        />
+                        <div className="input-group mb-3 bg-soft-light input-group-lg rounded-lg">
+                          <div className="input-group-prepend">
+                            <span className="input-group-text border-light text-muted">
+                              <i class="fa fa-unlock-alt fa-lg"></i>
+                            </span>
+                          </div>
+                          <input
+                            className="form-control bg-soft-light border-light"
+                            placeholder="Enter Password"
+                            name="password"
+                            type="password"
+                            onChange={this.handleChange}
+                            value={this.state.password}
+                          />
+                        </div>
                       </div>
                       {this.state.error ? (
                         <p style={{ color: "red" }}>{this.state.error}</p>
                       ) : null}
                       <button
-                        className="btn btn-primary btn-block waves-effect waves-light"
+                        className="btn btn-primary btn-block waves-effect waves-light mb-3"
                         type="submit"
                       >
                         Sign up
                       </button>
-                      <p>You can also sign up with any of these services</p>
-                      <button
-                        className="btn btn-danger btn-block waves-effect waves-light"
-                        onClick={this.handleGoogleSignIn}
-                      >
-                        Sign up with Google
-                      </button>
-                      <button
-                        className="btn btn-info btn-block waves-effect waves-light"
-                        onClick={this.handleFbSignIn}
-                      >
-                        Sign up with Facebook
-                      </button>
+                      {/* <p>You can also sign up with any of these services</p>
+                      <div className="btn-group mb-3">
+                        <div className="input-group-prepend">
+                          <span className="input-group-text  text-muted">
+                          <i class="fa fa-google"></i>
+                          </span>
+                        </div>
+                        <button
+                          className="btn btn-danger btn-block waves-effect waves-light "
+                          onClick={this.handleGoogleSignIn}
+                        >
+                          Sign up with Google
+                        </button>
+                      </div> */}
+
                       <br></br>
                     </form>
                   </div>
@@ -125,6 +150,9 @@ export default class SignUp extends Component {
                 </p>
               </div>
             </div>
+            {/* <div className="img-container img-fluid ">
+              <img src="/assets/signup-background.jpg" alt="image" />
+            </div> */}
           </div>
         </div>
       </div>
