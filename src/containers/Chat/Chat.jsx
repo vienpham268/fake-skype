@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { auth } from "../../services/firebase";
 import { db } from "../../services/firebase";
-import './Chat.css'
+import "./Chat.css";
+import SideMenu from "../../components/SideMenu/SideMenu";
 
 class Chat extends Component {
   state = {
@@ -12,7 +13,7 @@ class Chat extends Component {
     writeError: null,
   };
 
-  handleSubmit = async (event) => {    
+  handleSubmit = async (event) => {
     event.preventDefault();
     this.setState({ writeError: null });
     try {
@@ -21,7 +22,7 @@ class Chat extends Component {
         timestamp: Date.now(),
         uid: this.state.user.uid,
       });
-      this.setState({ content: "" });     
+      this.setState({ content: "" });
     } catch (error) {
       this.setState({ writeError: error.message });
     }
@@ -50,53 +51,56 @@ class Chat extends Component {
 
   render() {
     return (
-      <div className="w-100">
-        {/* Conversation header */}
-        <div className="p-3 p-lg-4 border-bottom"></div>
+      <div className="layout-wrapper d-lg-flex">
+        <SideMenu />
+        <div className="w-100">
+          {/* Conversation header */}
+          <div className="p-3 p-lg-4 border-bottom"></div>
 
-        {/* Conversation body */}
-        <div className="chat-conversation p-3 p-lg-4">
-          <div className="simplebar-wrapper" style={{ margin: "-24px" }}>
-            <div
-              className="simplebar-mask"
-              style={{ right: "-17px", bottom: "0px" }}
-            >
+          {/* Conversation body */}
+          <div className="chat-conversation p-3 p-lg-4">
+            <div className="simplebar-wrapper" style={{ margin: "-24px" }}>
               <div
-                className="simplebar-content-wrapper"
-                style={{ height: "100%", overflow: "hidden" }}
-              ></div>
-            </div>
-          </div>
-        </div>
-
-        {/* Conversation bottom */}
-        <div className="p-3 p-lg-4 mb-0 border-top">
-          <div className="row no-gutters">
-            <div className="col">
-              <div>
-                <input
-                  placeholder="Enter Message..."
-                  className="form-control form-control-lg bg-light border-light"
-                  onChange={this.handleChange}
-                  value={this.state.content}
-                />
+                className="simplebar-mask"
+                style={{ right: "-17px", bottom: "0px" }}
+              >
+                <div
+                  className="simplebar-content-wrapper"
+                  style={{ height: "100%", overflow: "hidden" }}
+                ></div>
               </div>
             </div>
-            <div className="col-auto">
-              <div className="chat-input-links ml-md-2">
-                <ul className="list-inline mb-0">
-                  <li className="list-inline-item"></li>
-                  <li className="list-inline-item"></li>
-                  <li className="list-inline-item">
-                    <button
-                      onClick={this.handleSubmit}
-                      className="btn btn-primary"
-                      type="submit"
-                    >
-                      <i className="fa fa-paper-plane"></i>
-                    </button>
-                  </li>
-                </ul>
+          </div>
+
+          {/* Conversation bottom */}
+          <div className="p-3 p-lg-4 mb-0 border-top">
+            <div className="row no-gutters">
+              <div className="col">
+                <div>
+                  <input
+                    placeholder="Enter Message..."
+                    className="form-control form-control-lg bg-light border-light"
+                    onChange={this.handleChange}
+                    value={this.state.content}
+                  />
+                </div>
+              </div>
+              <div className="col-auto">
+                <div className="chat-input-links ml-md-2">
+                  <ul className="list-inline mb-0">
+                    <li className="list-inline-item"></li>
+                    <li className="list-inline-item"></li>
+                    <li className="list-inline-item">
+                      <button
+                        onClick={this.handleSubmit}
+                        className="btn btn-primary"
+                        type="submit"
+                      >
+                        <i className="fa fa-paper-plane"></i>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
