@@ -12,8 +12,26 @@ const SideMenu = () => {
               <i className="fa fa-user fa-2x"></i>
             </a>
           </li>
-          <li className="nav-item"></li>
-          <li className="nav-item"></li>
+          <li className="nav-item">
+            <a href="">
+              <i className="fa fa-user fa-2x"></i>
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="">
+              <i className="fa fa-user fa-2x"></i>
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="">
+              <i className="fa fa-user fa-2x"></i>
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="">
+              <i className="fa fa-user fa-2x"></i>
+            </a>
+          </li>
         </ul>
       </div>
       <div className="flex-lg-column d-none d-lg-block"></div>
