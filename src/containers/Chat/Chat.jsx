@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { auth } from "../../services/firebase";
 import { db } from "../../services/firebase";
-import '../Chat/Chat.css'
+import './Chat.css'
 
 class Chat extends Component {
   state = {
@@ -12,7 +12,7 @@ class Chat extends Component {
     writeError: null,
   };
 
-  handleSubmit = async (event) => {
+  handleSubmit = async (event) => {    
     event.preventDefault();
     this.setState({ writeError: null });
     try {
@@ -21,8 +21,7 @@ class Chat extends Component {
         timestamp: Date.now(),
         uid: this.state.user.uid,
       });
-      this.setState({ content: "" });
-      console.log(this.state.chats);
+      this.setState({ content: "" });     
     } catch (error) {
       this.setState({ writeError: error.message });
     }
@@ -94,7 +93,7 @@ class Chat extends Component {
                       className="btn btn-primary"
                       type="submit"
                     >
-                      <i class="fa fa-paper-plane"></i>
+                      <i className="fa fa-paper-plane"></i>
                     </button>
                   </li>
                 </ul>
