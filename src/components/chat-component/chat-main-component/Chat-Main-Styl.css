@@ -1,0 +1,30 @@
+.user-chat {
+  background-color: #fff;
+  width: 100vw;
+}
+.chat-header {
+  padding: 1.5rem !important;
+  border: 1px solid #f0eff5 !important;
+}
+
+.chat-header-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.chat-header-row > .user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.avatar {
+  margin-right: 20px;
+}
+.user-name a {
+  text-decoration: none !important;
+}
+
+.chat-conversation {
+  height: calc(100vh - 184px);
+}
