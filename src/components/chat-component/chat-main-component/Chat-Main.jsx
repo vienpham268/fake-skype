@@ -21,7 +21,9 @@ class ChatMain extends Component {
               </div>
             </div>
             <div className="user-tools">
-              <div className="name-status"></div>
+              <ul className="user-tools-ul">
+                <li className="tool-search"></li>
+              </ul>
             </div>
           </div>
         </div>
