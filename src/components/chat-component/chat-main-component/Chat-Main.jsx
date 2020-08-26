@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./Chat-Main-Styl.css";
 import arabic from "../../../assets/avatar/arabic.png";
+import sendico from "../../../assets/chat/sendico.png";
 class ChatMain extends Component {
   state = {};
   render() {
@@ -14,7 +15,9 @@ class ChatMain extends Component {
                 <img src={arabic} alt="arabic" />
               </div>
               <div className="user-name">
-                <h5><a href="">Arabic</a></h5>
+                <h5>
+                  <a href="">Arabic</a>
+                </h5>
               </div>
             </div>
             <div className="user-tools">
@@ -58,11 +61,11 @@ class ChatMain extends Component {
                   <li className="list-inline-item"></li>
                   <li className="list-inline-item">
                     <button
+                      className="btn-send"
                       onClick={this.handleSubmit}
-                      className="btn btn-primary"
                       type="submit"
                     >
-                      <i className="fa fa-paper-plane"></i>
+                      <img src={sendico} alt="" />
                     </button>
                   </li>
                 </ul>
