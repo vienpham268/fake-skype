@@ -17,29 +17,29 @@ const SideMenu = () => {
         </a>
       </div>
       <div className="menu-box">
-        <ul className="side-menu">
-          <li className="item user">
-            <a href="">
+        <ul className="ul-side-menu">
+          <li className="li-sidebar user">
+            <a className="li-sidebar-link" href="">
               <img src={userico} alt="" />
             </a>
           </li>
-          <li className="item chat">
-            <a href="">
+          <li className="li-sidebar chat">
+            <a className="li-sidebar-link" href="">
               <img src={chatico} alt="" />
             </a>
           </li>
-          <li className="item group">
-            <a href="">
+          <li className="li-sidebar group">
+            <a className="li-sidebar-link" href="">
               <img src={groupico} alt="" />
             </a>
           </li>
-          <li className="item contact">
-            <a href="">
+          <li className="li-sidebar contact">
+            <a className="li-sidebar-link" href="">
               <img src={contactico} alt="" />
             </a>
           </li>
-          <li className="item setting">
-            <a href="">
+          <li className="li-sidebar setting">
+            <a className="li-sidebar-link" href="">
               <img src={settingico} alt="" />
             </a>
           </li>

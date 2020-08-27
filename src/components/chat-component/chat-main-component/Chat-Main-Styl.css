@@ -1,6 +1,10 @@
-.user-chat {
+.chat-main {
   background-color: #fff;
   width: 100vw;
+}
+
+.chat-body {
+  height: calc(100vh - 184px);
 }
 .chat-header {
   padding: 1.5rem !important;
@@ -10,12 +14,14 @@
 .chat-header-row {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .chat-header-row > .user {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: inherit;
+  width: 34%;
 }
 
 .avatar {
@@ -24,6 +30,39 @@
 .user-name a {
   text-decoration: none !important;
 }
+
+.user-tools {
+  width: 66%;
+  padding-right: 12px;
+  padding-left: 12px;
+}
+
+.ul-user-tools {
+  list-style: none;
+  text-align: right;
+  margin-bottom: 0;
+}
+
+.li-user-tool {
+  display: inline-block;
+}
+
+button.button {
+  border: none;
+  height: 40px;
+  width: 40px;
+  background-color: transparent;
+}
+
+button.button:focus {
+  outline: none;
+}
+
+.li-user-tool:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+/* Chat conversation */
 
 .chat-conversation {
   height: calc(100vh - 184px);
