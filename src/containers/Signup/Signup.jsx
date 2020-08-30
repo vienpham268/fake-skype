@@ -11,6 +11,7 @@ export default class SignUp extends Component {
     this.setState({ error: null });
     try {
       await signup(this.state.email, this.state.password);
+      
     } catch (error) {
       this.setState({ error: error.message });
     }

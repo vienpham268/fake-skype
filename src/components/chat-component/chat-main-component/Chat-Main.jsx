@@ -1,18 +1,67 @@
 import React, { Component } from "react";
 import "./Chat-Main-Styl.css";
-
+import { auth, db } from "../../../services/firebase";
 import ChatMainHeader from "./Chat-Main-Header";
 import ChatMainBody from "./Chat-Main-Body";
 import ChatMainFooter from "./Chat-Main-Footer";
 
 class ChatMain extends Component {
-  state = {};
+  state = {
+    user: auth().currentUser,
+    chats: [],
+    content: "",
+    readError: null,
+    writeError: null,
+  };
+
+  handleSubmit = async (event) => {
+    console.log("user", this.state.user);
+    event.preventDefault();
+    this.setState({ writeError: null });
+    try {
+      await db.ref("chats").push({
+        content: this.state.content,
+        timestamp: new Date().toLocaleTimeString(),
+        uid: this.state.user.uid,
+        email: this.state.user.email,
+      });
+      this.setState({ content: "" });
+    } catch (error) {
+      this.setState({ writeError: error.message });
+    }
+  };
+
+  handleChange = (event) => {
+    this.setState({
+      content: event.target.value,
+    });
+  };
+
+  async componentDidMount() {
+    this.setState({ readError: null });
+    try {
+      db.ref("chats").on("value", (snapshot) => {
+        let chats = [];
+        snapshot.forEach((snap) => {
+          chats.push(snap.val());
+        });
+        this.setState({ chats });
+      });
+    } catch (error) {
+      this.setState({ readError: error.message });
+    }
+  }
   render() {
+    const { user, chats, content } = this.state;
     return (
       <div className="chat-main">
         <ChatMainHeader />
-        <ChatMainBody />
-        <ChatMainFooter />
+        <ChatMainBody user={user} chats={chats} />
+        <ChatMainFooter
+          content={content}
+          handleChange={this.handleChange}
+          handleSubmit={this.handleSubmit}
+        />
       </div>
     );
   }
