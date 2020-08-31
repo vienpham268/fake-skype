@@ -8,7 +8,7 @@ import settingico from "../../../assets/sidebar/settingico.png";
 
 const SideMenu = () => {
   return (
-    <div className="side-menu-container">
+    <div className="side-menu">
       <div className="brand-box">
         <a href="" className="logo">
           <span className="logo">
@@ -19,27 +19,27 @@ const SideMenu = () => {
       <div className="menu-box">
         <ul className="ul-side-menu">
           <li className="li-sidebar user">
-            <a className="li-sidebar-link" href="">
+            <a className="li-sidebar-link" href="#panel-user">
               <img src={userico} alt="" />
             </a>
           </li>
           <li className="li-sidebar chat">
-            <a className="li-sidebar-link" href="">
+            <a className="li-sidebar-link" href="#pane-chat">
               <img src={chatico} alt="" />
             </a>
           </li>
           <li className="li-sidebar group">
-            <a className="li-sidebar-link" href="">
+            <a className="li-sidebar-link" href="#pane-groups">
               <img src={groupico} alt="" />
             </a>
           </li>
           <li className="li-sidebar contact">
-            <a className="li-sidebar-link" href="">
+            <a className="li-sidebar-link" href="#pane-contacts">
               <img src={contactico} alt="" />
             </a>
           </li>
           <li className="li-sidebar setting">
-            <a className="li-sidebar-link" href="">
+            <a className="li-sidebar-link" href="#pane-setting">
               <img src={settingico} alt="" />
             </a>
           </li>

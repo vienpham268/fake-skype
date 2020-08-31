@@ -1,6 +1,14 @@
-.chat-main {
-  background-color: #fff;
-  width: 100vw;
+@media (min-width: 992px) {
+  .chat-main {
+    background-color: #fff;
+    width: 100vw;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .chat-main {
+    visibility: hidden;
+  }
 }
 
 .conversation-body {
@@ -24,7 +32,6 @@
   clear: both;
   margin-bottom: 35px;
 }
-
 
 .li-conversation > .wrap-conversation {
   display: inline-flex;
@@ -61,7 +68,7 @@
 .user-chat-content > .wrap-text {
   border-radius: 17px;
   padding: 12px 20px;
-  background-color:cornflowerblue;
+  background-color: cornflowerblue;
   color: #fff;
 }
 
@@ -139,4 +146,8 @@ button.button:focus {
 
 .chat-conversation {
   height: calc(100vh - 184px);
+}
+
+.form-control.form-control-lg.bg-light {
+  background-color: #e6ebf5 !important;
 }

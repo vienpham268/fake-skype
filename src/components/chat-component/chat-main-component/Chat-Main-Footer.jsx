@@ -2,13 +2,14 @@ import React from "react";
 import sendico from "../../../assets/chat/sendico.png";
 
 const ChatMainFooter = (props) => {
-  const { content, handleChange, handleSubmit } = props;
+  const { content, handleChange, handleSubmit,handlePressEnter} = props;
   return (
     <div className="p-3 p-lg-4 mb-0 border-top">
       <div className="row no-gutters">
         <div className="col">
           <div>
             <input
+              onKeyPress={handlePressEnter}
               placeholder="Enter Message..."
               className="form-control form-control-lg bg-light border-light"
               onChange={handleChange}

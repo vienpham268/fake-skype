@@ -1,7 +1,25 @@
-.chat-leftsidebar {
-  min-width: 380px;
-  max-width: 380px;
-  height: 100vh;
-  background-color: #f5f7fb;
+@media (min-width: 992px) {
+  .chat-leftsidebar {
+    min-width: 380px;
+    max-width: 380px;
+    height: 100vh;
+    background-color: #f5f7fb;
+  }
+
+  @media (max-width: 991.98px) {
+    .chat-leftsidebar {
+      visibility: hidden;
+    }
+  }
 }
+
+.tab-pane.header{
+  width: 100%;
+  height: 188px;
+  border: 1px solid red;
+}
+
+
+
+
 

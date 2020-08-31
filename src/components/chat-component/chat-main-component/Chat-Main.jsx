@@ -15,7 +15,6 @@ class ChatMain extends Component {
   };
 
   handleSubmit = async (event) => {
-    console.log("user", this.state.user);
     event.preventDefault();
     this.setState({ writeError: null });
     try {
@@ -28,6 +27,12 @@ class ChatMain extends Component {
       this.setState({ content: "" });
     } catch (error) {
       this.setState({ writeError: error.message });
+    }
+  };
+
+  handlePressEnter = (event) => {
+    if (event.key === "Enter") {
+      this.handleSubmit(event);
     }
   };
 
@@ -61,6 +66,7 @@ class ChatMain extends Component {
           content={content}
           handleChange={this.handleChange}
           handleSubmit={this.handleSubmit}
+          handlePressEnter={this.handlePressEnter}
         />
       </div>
     );
