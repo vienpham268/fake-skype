@@ -3,7 +3,9 @@
     min-width: 380px;
     max-width: 380px;
     height: 100vh;
+    box-sizing: border-box;
     background-color: #f5f7fb;
+    margin-right: 0.25rem;
   }
 
   @media (max-width: 991.98px) {
@@ -13,13 +15,41 @@
   }
 }
 
-.tab-pane.header{
+.content {
+  box-sizing: border-box;
   width: 100%;
-  height: 188px;
-  border: 1px solid red;
+  height: 100%;
+  position: relative;
 }
 
+.pane.active {
+  display: block;
+}
 
+.pane {
+  display: none;
+}
 
+.pane-header {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1.5rem;
+}
 
+.search.mb-3 {
+  display: flex;
+  flex-direction: row;
+  border-radius: 0.4rem;
+  background-color: #e6ebf5 !important;
+}
 
+.search-button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  line-height: 1.5;
+}
+
+.form-control{
+  line-height: 10;
+}

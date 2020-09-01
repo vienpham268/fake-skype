@@ -46,6 +46,7 @@ class ChatMain extends Component {
     this.setState({ readError: null });
     try {
       db.ref("chats").on("value", (snapshot) => {
+        console.log("snapshot", snapshot.val());
         let chats = [];
         snapshot.forEach((snap) => {
           chats.push(snap.val());
