@@ -28,6 +28,9 @@
 
 .pane {
   display: none;
+  position: relative;
+  height: inherit;
+  width: inherit;
 }
 
 .pane-header {
@@ -36,9 +39,19 @@
   padding-top: 1.5rem;
 }
 
+.pane-body {
+  position: absolute;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  width: inherit;
+  height: inherit;
+}
+
 .search.mb-3 {
   display: flex;
   flex-direction: row;
+  position: relative;
+  line-height: 1.5;
   border-radius: 0.4rem;
   background-color: #e6ebf5 !important;
 }
@@ -47,9 +60,69 @@
   outline: none;
   border: none;
   background-color: transparent;
-  line-height: 1.5;
+  line-height: 100%;
 }
 
-.form-control{
-  line-height: 10;
+.search-button:focus {
+  outline: none;
+}
+
+.input-search {
+  background-color: transparent;
+  width: 100%;
+  line-height: 100%;
+  border: none;
+}
+.input-search:focus {
+  outline: none;
+}
+
+.h5-recent {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.list-recent-chat {
+  width: inherit;
+  height: inherit;
+  padding: 0 !important;
+}
+
+.ul-recent {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.li-recent-link {
+  display: flex;
+  flex-direction: row;   
+}
+
+.li-recent-link:hover{
+  text-decoration: none;
+}
+
+.recent-avatar {
+  margin-right: 1rem;
+  align-self: center;
+}
+
+.recent-chat-content {
+  flex: 1; 
+  align-self: center; 
+}
+
+.time-left{
+  font-size: 11px;
+}
+
+.font-15{
+  font-size: 15px;
+  margin-bottom: .25rem;
+}
+
+.font-14{
+  font-size: 14px;
+  margin-bottom: 0;
 }

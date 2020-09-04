@@ -1,7 +1,7 @@
 @media (min-width: 992px) {
   .chat-main {
     background-color: #fff;
-    width: 100vw;
+    width: 100vw;    
   }
 }
 
@@ -9,6 +9,10 @@
   .chat-main {
     visibility: hidden;
   }
+}
+
+body{
+  overflow: hidden;
 }
 
 .conversation-body {
