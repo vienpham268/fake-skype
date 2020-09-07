@@ -23,7 +23,7 @@ class ChatMain extends Component {
         timestamp: new Date().toLocaleTimeString(),
         uid: this.state.user.uid,
         email: this.state.user.email,
-      });
+      });     
       this.setState({ content: "" });
     } catch (error) {
       this.setState({ writeError: error.message });
@@ -45,8 +45,7 @@ class ChatMain extends Component {
   async componentDidMount() {
     this.setState({ readError: null });
     try {
-      db.ref("chats").on("value", (snapshot) => {
-        console.log("snapshot", snapshot.val());
+      db.ref("chats").on("value", (snapshot) => {        
         let chats = [];
         snapshot.forEach((snap) => {
           chats.push(snap.val());

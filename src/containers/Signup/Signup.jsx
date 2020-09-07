@@ -5,13 +5,14 @@ import {
   signInWithGoogleAccount,
   signInWithFacebookAccount,
 } from "../../helpers/auth";
+
+import { auth, db } from "../../services/firebase";
 export default class SignUp extends Component {
   handleSubmit = async (event) => {
     event.preventDefault();
     this.setState({ error: null });
     try {
       await signup(this.state.email, this.state.password);
-      
     } catch (error) {
       this.setState({ error: error.message });
     }
@@ -65,7 +66,7 @@ export default class SignUp extends Component {
                         <div className="input-group mb-3 bg-soft-light input-group-lg rounded-lg">
                           <div className="input-group-prepend">
                             <span className="input-group-text border-light text-muted">
-                              <i class="fa fa-envelope fa-xs" />
+                              <i className="fa fa-envelope fa-xs" />
                             </span>
                           </div>
                           <input
