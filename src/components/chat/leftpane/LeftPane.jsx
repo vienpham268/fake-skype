@@ -6,10 +6,11 @@ import arabic from "../../../assets/avatar/arabic.png";
 class LeftPane extends Component {
   state = {
     users: [],
-    groups: [],
   };
 
-  componentDidMount() {}
+  componentDidMount() {
+    
+  }
 
   render() {
     return (
