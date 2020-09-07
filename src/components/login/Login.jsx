@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { signin } from "../../helpers/auth";
 import { Link } from "react-router-dom";
-import "../Login/Login.css";
+import "./LoginStyl.css";
 
 class Login extends Component {
   handleSubmit = async (event) => {

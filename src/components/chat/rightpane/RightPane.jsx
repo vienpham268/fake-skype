@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import "./Chat-Main-Styl.css";
+import "./RightPaneStyl.css";
 import { auth, db } from "../../../services/firebase";
-import ChatMainHeader from "./Chat-Main-Header";
-import ChatMainBody from "./Chat-Main-Body";
-import ChatMainFooter from "./Chat-Main-Footer";
+import ChatMainHeader from "./Header";
+import ChatMainBody from "./Body";
+import ChatMainFooter from "./Footer";
 
-class ChatMain extends Component {
+class RightPane extends Component {
   state = {
     user: auth().currentUser,
     chats: [],
@@ -73,4 +73,4 @@ class ChatMain extends Component {
   }
 }
 
-export default ChatMain;
+export default RightPane;

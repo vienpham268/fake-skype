@@ -1,12 +1,12 @@
 import React from "react";
-import "./Side-Menu-Styl.css";
+import "./SideBarStyl.css";
 import userico from "../../../assets/sidebar/userico.png";
 import chatico from "../../../assets/sidebar/chatico.png";
 import groupico from "../../../assets/sidebar/groupico.png";
 import contactico from "../../../assets/sidebar/contactico.png";
 import settingico from "../../../assets/sidebar/settingico.png";
 
-const SideMenu = () => {
+const SideBar = () => {
   return (
     <div className="side-menu">
       <div className="brand-box">
@@ -50,4 +50,4 @@ const SideMenu = () => {
   );
 };
 
-export default SideMenu;
+export default SideBar;

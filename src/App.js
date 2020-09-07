@@ -7,10 +7,10 @@ import {
   useHistory,
 } from "react-router-dom";
 
-import Home from "./containers/Home/Home";
-import Chat from "./containers/Chat/Chat";
-import Signup from "./containers/Signup/Signup";
-import Login from "./containers/Login/Login";
+import Home from "./components/home/Home";
+import Chat from "./containers/chat/ChatContainer";
+import Signup from "./components/signup/Signup";
+import Login from "./components/login/Login";
 import { auth } from "./services/firebase";
 import "./App.css";
 

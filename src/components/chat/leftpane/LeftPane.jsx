@@ -1,10 +1,16 @@
 import React, { Component } from "react";
-import "./Chat-Left-Styl.css";
+import "./LeftPaneStyl.css";
 import searchico from "../../../assets/chat/searchico.png";
 import arabic from "../../../assets/avatar/arabic.png";
 
-class ChatLeft extends Component {
-  state = {};
+class LeftPane extends Component {
+  state = {
+    users: [],
+    groups: [],
+  };
+
+  componentDidMount() {}
+
   render() {
     return (
       <div className="chat-leftsidebar">
@@ -34,7 +40,7 @@ class ChatLeft extends Component {
                       </div>
                       <div className="recent-chat-content">
                         <h5 className="font-15">Arabic</h5>
-                        <p className='font-14'>hello im here</p>
+                        <p className="font-14">hello im here</p>
                       </div>
                       <div className="time-left">5 min</div>
                     </a>
@@ -50,4 +56,4 @@ class ChatLeft extends Component {
   }
 }
 
-export default ChatLeft;
+export default LeftPane;
