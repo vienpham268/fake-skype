@@ -21,7 +21,7 @@ class RightPane extends Component {
       await db.ref("chats").push({
         content: this.state.content,
         timestamp: new Date().toLocaleTimeString(),
-        uid: this.state.user.uid,
+        fromID: this.state.user.uid,
         email: this.state.user.email,
       });     
       this.setState({ content: "" });

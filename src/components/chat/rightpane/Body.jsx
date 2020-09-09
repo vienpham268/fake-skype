@@ -5,7 +5,7 @@ const ChatMainBody = (props) => {
   const { user, chats } = props;
   function identifyActiveUser(chat) {
     let className = "li-conversation";
-    if (user.uid === chat.uid) {
+    if (user.uid === chat.fromID) {
       className += " right";
     }
 

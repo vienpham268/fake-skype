@@ -96,10 +96,10 @@
 
 .li-recent-link {
   display: flex;
-  flex-direction: row;   
+  flex-direction: row;
 }
 
-.li-recent-link:hover{
+.li-recent-link:hover {
   text-decoration: none;
 }
 
@@ -109,20 +109,24 @@
 }
 
 .recent-chat-content {
-  flex: 1; 
-  align-self: center; 
+  flex: 1;
+  align-self: center;
 }
 
-.time-left{
+.time-left {
   font-size: 11px;
 }
 
-.font-15{
+.font-15 {
   font-size: 15px;
-  margin-bottom: .25rem;
+  margin-bottom: 0.25rem;
 }
 
-.font-14{
+.font-14 {
   font-size: 14px;
   margin-bottom: 0;
+}
+
+.li-recent.hidden {
+  display: none;
 }
